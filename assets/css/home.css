@@ -1,0 +1,263 @@
+/* root tag for all element */
+
+html {
+    font-size: 90%;
+}
+
+
+/* main body part */
+
+body {
+    margin: 0;
+    background-color: black;
+    color: rgb(82, 79, 79)
+}
+
+
+/* h1 style */
+
+h1 {
+    font-size: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* Input buttons with type text */
+
+input[type="text"] {
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+input[type="date"] {
+    border: none;
+    background: transparent;
+}
+
+
+/* styling all label  */
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+/* select for all */
+
+select {
+    width: 95%;
+    font-size: 14px;
+    line-height: 1;
+    border: none;
+    border-radius: 5px;
+    height: 34px;
+    background: none;
+    /* background-position-x: 244px; */
+}
+
+
+/* button style for add and delete */
+
+button {
+    display: inline-block;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 170px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 30px;
+}
+
+
+/* main container containing everything */
+
+.main-container {
+    margin: auto;
+    background-color: white;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* App heading and logo */
+
+#heading-container {
+    display: flex;
+    margin: 0px 0;
+    justify-content: center;
+}
+
+#app-heading {
+    /* color: gray; */
+    margin-top: 15px;
+}
+
+#app-logo {
+    width: 50px;
+    margin: 10px 0 0 20px;
+}
+
+
+/* Add Task Section */
+
+
+/* Task Description */
+
+.description {
+    padding: 10px;
+    border-top: 1px solid;
+}
+
+.description:hover {
+    background-color: #eeeeee;
+}
+
+.description label,
+input {
+    padding: 4px;
+}
+
+
+/* Category and Duedate common container */
+
+.category-duedate-container {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+/*Category div */
+
+.category {
+    margin: 4px;
+    min-width: 50%;
+    border-right: 1px solid;
+}
+
+.category:hover {
+    background-color: #eeeeee;
+}
+
+.category label,
+input {
+    padding: 4px;
+}
+
+
+/* Duedate div */
+
+.duedate {
+    min-width: 48%;
+    margin: 4px;
+}
+
+.duedate:hover {
+    background-color: #eeeeee;
+}
+
+.duedate label,
+input {
+    padding: 4px;
+}
+
+
+/* style for add button */
+
+.add-task {
+    margin: auto;
+}
+
+.add-task button {
+    background-color: rgb(29, 131, 29);
+}
+
+.add-task button:hover {
+    background-color: rgb(80, 226, 80);
+}
+
+
+/* Task List Section */
+
+
+/* Sub headings of TAsk list */
+
+.sub-heading h4 {
+    display: inline-block;
+    margin: 0px 5.5%;
+}
+
+
+/* Elements of task list */
+
+.task-list div {
+    display: inline-block;
+    margin: 0px 2%;
+}
+
+
+/* min width for every list element */
+
+.defined-width {
+    min-width: 10%;
+}
+
+
+/* style for delete button */
+
+.delete-task button {
+    background-color: #bd4545;
+}
+
+.delete-task button:hover {
+    background-color: red;
+}
+
+.category-color {
+    background-color: darkblue;
+    padding: 0 0 10px 7px;
+    color: yellow;
+}
+
+
+/* for coloring different category */
+
+
+/* .todo__category-personal {
+    background-color: blueviolet;
+}
+
+.todo__category-work {
+    background-color: hsla(177, 66%, 69%, 0.534);
+}
+
+.todo__category-school {
+    background-color: rgb(227, 240, 118);
+}
+
+.todo__category-cleaning {
+    background-color: green;
+}
+
+.todo_category-other {
+    background-color: #cccccc;
+} */

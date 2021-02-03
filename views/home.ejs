@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <section class="container">
+            <!-- Heading of our app -->
+            <div id="heading-container">
+                <div>
+                    <h1 id="app-heading">ToDo App </h1>
+                </div>
+                <div>
+                    <!-- App logo image -->
+                    <img id="app-logo" src="/images/todo-logo.png" alt="checklist-logo">
+                </div>
+            </div>
+
+            <!-- form to create task -->
+            <form action="/createTask" method="POST">
+
+                <!-- Task description -->
+                <div class="description">
+                    <label for="description">Task Description</label>
+                    <input type="text" name="description" placeholder="What do you need to do?" required></input>
+                </div>
+
+                <!-- Task Category -->
+                <div class="category-duedate-container">
+                    <div class="category">
+                        <label for="category">Category</label>
+                        <select name="category" required>
+                                <option disabled selected>Choose Category</option>
+                                <option class="todo__category-personal">PERSONAL</option>
+                                <option class="todo__category-work">WORK</option>
+                                <option class="todo__category-school">SCHOOL</option>
+                                <option class="todo__category-cleaning">CLEANING</option>
+                                <option class="todo_category-other">OTHER</option>
+
+                            </select>
+                    </div>
+
+                    <!-- Due Date for the task -->
+                    <div class="duedate">
+                        <label for="date">Due Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                </div>
+
+                <!-- Add Task button -->
+                <div align="center" class="add-task">
+                    <button type="submit"><i class="fas fa-plus"></i>  Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Task List Section -->
+        <div>
+            <h1 align="center">TASKS LIST</h1>
+
+            <form action="/deleteTask" method="GET">
+                <div class="sub-heading">
+                    <h4>Select</h4>
+                    <h4>Task</h4>
+                    <h4>Category</h4>
+                    <h4>Due Date</h4>
+                </div>
+
+                <!-- looping on tasks to display -->
+                <% for(let i of task) { %>
+                    <ul>
+                        <li class="task-list">
+                            <div class="defined-width">
+                                <input type="checkbox" name="<%= i._id %>">
+                            </div>
+                            <div class="defined-width">
+                                <p>
+                                    <%= i.description %>
+
+                            </div>
+                            <div class="defined-width category-color">
+                                <p></p>
+                                <%= i.category %>
+
+                            </div>
+                            <div class="defined-width">
+                                <p>
+                                    <%= i.date %>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <% } %>
+
+                        <!-- Delete Task button -->
+                        <div align="center" class="delete-task">
+                            <button type="submit"><i class="fas fa-trash"></i>  Delete Tasks</button></td>
+                        </div>
+            </form>
+
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/50cc490705.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
